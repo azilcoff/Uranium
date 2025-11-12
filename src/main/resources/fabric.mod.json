@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/azilcoff/Destructive_Ores.git"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/dores/icon.png",
@@ -18,6 +18,9 @@
 		"main": [
 			"net.azilcoff.dores.DestructiveOres"
 		],
+        "client": [
+            "net.azilcoff.dores.DestructiveOresClient"
+        ],
 		"fabric-datagen": [
 			"net.azilcoff.dores.DestructiveOresDataGenerator"
 		]
