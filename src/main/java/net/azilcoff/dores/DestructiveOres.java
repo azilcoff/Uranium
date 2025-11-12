@@ -1,6 +1,7 @@
 package net.azilcoff.dores;
 
 import net.azilcoff.dores.component.ModDataComponentTypes;
+import net.azilcoff.dores.entity.effect.ModStatusEffects;
 import net.azilcoff.dores.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,5 +16,6 @@ public class DestructiveOres implements ModInitializer {
 	public void onInitialize() {
         ModItems.registerModItems();
         ModDataComponentTypes.registerDataComponentTypes();
+        ModStatusEffects.registerModStatusEffects();
 	}
 }

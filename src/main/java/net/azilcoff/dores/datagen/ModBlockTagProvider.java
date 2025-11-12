@@ -3,6 +3,9 @@ package net.azilcoff.dores.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
+
+import static net.azilcoff.dores.tag.ModBlockTags.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -13,6 +16,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
+        valueLookupBuilder(INCORRECT_FOR_URANIUM)
+                .forceAddTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
     }
 }
