@@ -1,5 +1,6 @@
 package net.azilcoff.dores.datagen;
 
+import net.azilcoff.dores.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -18,5 +19,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(INCORRECT_FOR_URANIUM)
                 .forceAddTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.URANIUM_ORE, ModBlocks.DEEPSLATE_URANIUM_ORE);
+
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.URANIUM_ORE, ModBlocks.DEEPSLATE_URANIUM_ORE);
     }
 }

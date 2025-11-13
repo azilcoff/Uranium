@@ -1,6 +1,6 @@
 package net.azilcoff.dores.datagen;
 
-import net.azilcoff.dores.entity.effect.ModStatusEffects;
+import net.azilcoff.dores.block.ModBlocks;
 import net.azilcoff.dores.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -18,5 +18,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.URANIUM, "Uranium");
         translationBuilder.add(ModItems.URANIUM_SWORD,"Uranium Sword");
         translationBuilder.add("effect.dores.high_radiation","High Radiation");
+        translationBuilder.add(ModBlocks.URANIUM_ORE,"Uranium Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
     }
 }

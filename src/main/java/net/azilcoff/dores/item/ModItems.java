@@ -21,7 +21,7 @@ public class ModItems {
 
     public static <R extends Item> Item registerItem (String id, RegistryKey<ItemGroup> tab, Function<Item.Settings, R> entry) {
         R r = Registry.register(Registries.ITEM, Identifier.of(DestructiveOres.MOD_ID, id), entry.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(DestructiveOres.MOD_ID, id)))));
-        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(r));
+        if (tab != null) ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(r));
         return r;
     }
     private static <R extends Item> Item registerSwordItem(String id, Function<Item.Settings, R> entry, ToolMaterial material){
