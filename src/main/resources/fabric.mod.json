@@ -12,7 +12,7 @@
 		"sources": "https://github.com/azilcoff/Destructive_Ores.git"
 	},
 	"license": "MIT",
-	"icon": "assets/dores/icon.png",
+	"icon": "assets/uranium/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
