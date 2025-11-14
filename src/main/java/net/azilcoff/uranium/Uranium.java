@@ -24,8 +24,8 @@ public class Uranium implements ModInitializer {
         ModWorldGeneration.generateModWorldGen();
 
         ServerEntityEvents.EQUIPMENT_CHANGE.register((serverEntity, equipmentSlot, previousStack, newStack) -> {
-            if (newStack.isOf(ModItems.URANIUM) && serverEntity.getStatusEffects().stream().noneMatch(statusEffectInstance -> statusEffectInstance.getEffectType() == ModStatusEffects.HIGH_RADIATION.value())){
-                serverEntity.addStatusEffect(new StatusEffectInstance(ModStatusEffects.HIGH_RADIATION, 160));
+            if (newStack.isOf(ModItems.URANIUM) && serverEntity.getStatusEffects().stream().noneMatch(statusEffectInstance -> statusEffectInstance.getEffectType().equals(ModStatusEffects.HIGH_RADIATION))){
+                serverEntity.addStatusEffect(new StatusEffectInstance(ModStatusEffects.HIGH_RADIATION, 120));
             }
         });
 	}
